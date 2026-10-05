@@ -1,0 +1,46 @@
+# 知客官網改版 Prototype
+
+CMoney 消費事業群「知客」官網改版的互動原型，依《知客官網優化建議》製作。
+
+**線上預覽：** https://eureka-uiux.github.io/consumer-business/
+
+> ⚠️ 這是**提案用原型**，不是正式網站。表單不會送出任何資料，站內數據與案例為示意內容。
+
+## 這份原型涵蓋什麼
+
+| 區塊 | 說明 |
+|---|---|
+| 首屏 Hero | 滿版大底圖，文案主軸改為營收成長 |
+| 導覽列 | 精簡為「解決方案 / 洞察與案例 / 關於我們」3 項，展開選單同時呈現方案、角色與最新消息 |
+| 依角色 | 不同角色的進入點 |
+| 發票數據 | 資料來源與規模說明（月活消費者、代表性通路、月實購筆數） |
+| 洞察與案例 | 觀點文章與客戶案例 |
+| 產品模組 | 經營分析、受眾平台、會員標籤 |
+| 零售戰情室 | 通路與市場視角 |
+| 廣告合作 | 投後分析等 |
+| 轉換階梯 | 月報訂閱 → 白皮書 → 品牌健檢 → 顧問預約的漸進式 CTA |
+
+## 技術說明
+
+- **單檔部署**：`index.html` 為自我包含的靜態頁面，所有 CSS、JS 與圖片（61 張，base64 內嵌）都在檔案裡，無需 build、無外部資產相依。
+- **唯一外部資源**：Google Fonts（Noto Sans TC）。
+- **`.nojekyll`**：停用 GitHub Pages 的 Jekyll 處理，避免底線開頭檔名被忽略。
+- **`og-image.jpg`**：社群分享縮圖（Slack / LINE / Facebook 連結預覽用）。
+- **`noindex, nofollow`**：原型階段刻意不開放搜尋引擎索引。方案定案、要對外公開時再移除 `<head>` 裡的這行 meta。
+
+## 本機預覽
+
+直接用瀏覽器開啟 `index.html` 即可，或：
+
+```bash
+python3 -m http.server 8000
+# 然後開 http://localhost:8000
+```
+
+## 部署
+
+推到 `main` 後，到 repo 的 **Settings → Pages**，Source 選 **Deploy from a branch**，Branch 選 **`main` / `(root)`**。約 1 分鐘後上線。
+
+---
+
+原始原型來源：`cm-bigdata.zeabur.app`
