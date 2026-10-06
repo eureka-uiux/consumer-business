@@ -874,6 +874,65 @@ body.annot [data-note]::before{content:attr(data-note);position:absolute;z-index
   .rail .flow small{display:none}
   .rail .flow i{width:26px;height:26px;font-size:12px}
 }
+
+/* ===== 2.0: next step — free report hook ===== */
+.hk{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);background:var(--dark);border-radius:22px;overflow:hidden;margin-bottom:28px;position:relative;z-index:1}
+.hk-l{padding:40px;display:flex;gap:36px;align-items:center;color:var(--on-dark)}
+.hk-covers{position:relative;width:250px;height:320px;flex:none;display:flex;align-items:center}
+.hk-c,.hk-c2{width:216px;aspect-ratio:210/297;border-radius:6px;box-sizing:border-box}
+.hk-c2{position:absolute;left:26px;top:18px;background:#fff;opacity:.9;transform:rotate(4deg);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.hk-c{position:relative;background:#fff;color:var(--ink);padding:18px 16px;display:flex;flex-direction:column;gap:6px;transform:rotate(-3deg);box-shadow:0 22px 44px rgba(0,0,0,.35)}
+.hk-k{font-size:10px;font-weight:900;letter-spacing:.14em;color:var(--red)}
+.hk-t{margin-top:6px!important;font-size:22px;font-weight:900;line-height:1.3}
+.hk-s{font-size:11px;color:var(--muted);line-height:1.5}
+.hk-bars{margin-top:auto;display:flex;flex-direction:column;gap:4px}.hk-bars i{display:block;height:6px;border-radius:3px;background:#262626}
+.hk-n{margin-top:6px!important;font-size:18px;font-weight:900}
+.hk-p{font-size:10px;color:#8A8F94}
+.hk-copy{display:flex;flex-direction:column;gap:14px}
+.hk-badge{align-self:flex-start;font-size:12px;font-weight:800;padding:4px 12px;border-radius:999px;background:#FFB020;color:#17191B}
+.hk-copy h3{font-size:28px;font-weight:900;line-height:1.35;color:#fff}
+.hk-copy > p{font-size:15px;line-height:1.7;color:#CFCAC7}
+.hk-chk{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;font-size:14px;color:#CFCAC7}
+.hk-chk li{display:flex;gap:8px}.hk-chk li::before{content:"✓";color:#5FD3A0;font-weight:900}
+.hk-form{background:#fff;padding:36px 36px 30px;display:flex;flex-direction:column;gap:14px}
+.hk-ft{font-size:18px;font-weight:900}
+.hk-form label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;color:#444}
+.hk-form input[type=email],.hk-form input[type=text],.hk-form select{font:inherit;min-height:46px;border:1px solid #D9DEE3;border-radius:10px;padding:0 14px;font-size:15px;background:#fff;color:var(--ink)}
+.hk-form .hk-ok{flex-direction:row;align-items:flex-start;gap:8px;font-size:12.5px;font-weight:500;color:var(--muted)}
+.hk-ok input{margin-top:3px}
+.hk-form .btn{justify-content:center;width:100%}
+.hk-more{font-size:12.5px;color:#8A8F94;text-align:center}
+.hk-more a{color:var(--red-d);font-weight:700}
+.ladder-sec .ladder .rung:nth-child(1) .go{align-self:flex-start}
+@media (max-width:960px){.hk{grid-template-columns:1fr}.hk-l{padding:28px 22px;flex-direction:column;align-items:flex-start}.hk-covers{display:none}.hk-chk{grid-template-columns:1fr}.hk-form{padding:24px 22px}}
+.hk-l{padding:36px 40px 40px;display:flex;flex-direction:column;gap:24px;align-items:stretch;color:var(--on-dark)}
+.hk-step{font-size:13px;font-weight:800;letter-spacing:.08em;color:#FFB020}
+.hk-step-r{color:var(--red)}
+.hk-pick{display:flex;flex-direction:column;gap:10px}
+.hk-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.hk-tab{font:inherit;cursor:pointer;text-align:left;background:#202326;border:1.5px solid #33383D;border-radius:12px;padding:12px 14px;color:#CFCAC7;display:flex;flex-direction:column;gap:3px;min-height:64px;transition:background .2s,border-color .2s}
+.hk-tab b{font-size:15px;font-weight:900;color:#fff}.hk-tab small{font-size:12px;color:#8A8F94}
+.hk-tab:hover{border-color:#5A6067}
+.hk-tab:focus-visible{outline:2px solid #FFB020;outline-offset:2px}
+.hk-tab.on{background:#fff;border-color:#fff}.hk-tab.on b{color:#17191B}.hk-tab.on small{color:#666B71}
+.hk-body{display:flex;gap:32px;align-items:center}
+.hk-body.fx{animation:hkfx .3s ease-out both}@keyframes hkfx{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.hk-covers{position:relative;width:240px;height:310px;flex:none;display:flex;align-items:center}
+.hk-c,.hk-c2{width:200px;aspect-ratio:210/297;border-radius:6px;box-sizing:border-box}
+.hk-copy{min-width:0}
+.hk-copy h3{font-size:26px!important}
+.hk-peek{background:#202326;border:1px solid #33383D;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:9px}
+.hk-pt{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;font-weight:800;color:#fff}.hk-pt em{font-style:normal;font-size:11px;font-weight:700;color:#FFB020}
+.hk-peek .pk{display:grid;grid-template-columns:64px minmax(0,1fr) 40px;gap:10px;align-items:center;font-size:12.5px;color:#CFCAC7}
+.hk-peek .pk i{display:block;height:8px;border-radius:4px;background:#2A2E33;overflow:hidden}
+.hk-peek .pk s{display:block;height:100%;border-radius:4px;background:#8A8F94;transform-origin:left}
+.hk-body.fx .pk s{animation:hksx .9s cubic-bezier(.2,.7,.2,1) .1s both}@keyframes hksx{from{transform:scaleX(0)}to{transform:none}}
+.hk-peek .pk b{color:#fff;text-align:right;font-variant-numeric:tabular-nums}
+.hk-pf{font-size:12px;color:#A9A4A1}
+.hk-form input[type=tel]{font:inherit;min-height:46px;border:1px solid #D9DEE3;border-radius:10px;padding:0 14px;font-size:15px;background:#fff;color:var(--ink)}
+.hk-pt em{white-space:nowrap}
+@media (max-width:960px){.hk-tabs{grid-template-columns:1fr}.hk-body{flex-direction:column;align-items:flex-start}.hk-covers{display:none}.hk-copy h3{font-size:22px!important}}
+@media (prefers-reduced-motion:reduce){.hk-body.fx,.hk-body.fx .pk s{animation:none}}
 </style>
 </head>
 <body>
@@ -1363,18 +1422,60 @@ body.annot [data-note]::before{content:attr(data-note);position:absolute;z-index
   </div>
 </section>
 
-<section class="sec ladder-sec" id="ladder" data-note="行動階梯：從只有「預約諮詢」，變成四種深淺不同的下一步；卡片下方的點陣沿著小階梯一路亮起，多數停在前幾步、少數亮到 Demo，象徵名單一步步升溫（簡報 p.18）">
+<section class="sec ladder-sec" id="ladder" data-note="行動階梯（2.0）：最上方加入免費領取報告的填單鉤子：黑色區三份真實買家檔案擇一（封面＋內頁 Over-index 搶先看隨選切換），更多族群導向 cadshop 報告網站；表單含 Email、公司、電話、部門角色，四步階梯改為：免費報告 → 月度景氣 → 品牌健檢 → 顧問解說；卡片下方的點陣沿著小階梯一路亮起，多數停在前幾步、少數亮到 Demo，象徵名單一步步升溫（簡報 p.18）">
   <canvas class="ladder-bg" id="ladderBg" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Next Step</p>
       <h2 class="h2">選一個適合你的下一步</h2>
-      <p class="lead" style="margin-top:12px">從一封月報到一次顧問解說，照你的節奏一步步往上走。</p>
+      <p class="lead" style="margin-top:12px">還不確定？先拿一份免費報告看看，真實購買數據能告訴你什麼。</p>
+    </div>
+    <div class="hk" id="freeReport">
+      <div class="hk-l">
+        <div class="hk-pick">
+          <p class="hk-step">① 選一份你想看的真實買家檔案</p>
+          <div class="hk-tabs" role="tablist" aria-label="選擇報告">
+            <button type="button" role="tab" class="hk-tab on" data-hk="0" aria-selected="true"><b>百貨精品高消費族</b><small>395,880 人 · 百貨・精品</small></button>
+            <button type="button" role="tab" class="hk-tab" data-hk="1" aria-selected="false"><b>新手爸媽</b><small>225,556 人 · 母嬰</small></button>
+            <button type="button" role="tab" class="hk-tab" data-hk="2" aria-selected="false"><b>咖啡重度購買者</b><small>626,003 人 · 飲品</small></button>
+          </div>
+        </div>
+        <div class="hk-body" id="hkBody">
+          <div class="hk-covers" aria-hidden="true"><div class="hk-c2"></div>
+            <div class="hk-c"><p class="hk-k">TALARIA · 真實買家檔案</p><p class="hk-t" id="hkT">百貨精品<br>高消費族</p><p class="hk-s" id="hkDef">近一年百貨單筆 5,000 元以上，或累計超過 20,000 元</p>
+              <div class="hk-bars"><i style="width:90%;background:#DB1C26"></i><i style="width:64%"></i><i style="width:48%;background:#B8BEC5"></i></div>
+              <p class="hk-n" id="hkN">395,880 人</p><p class="hk-p">資料期間 2026 Q2</p></div>
+          </div>
+          <div class="hk-copy">
+            <h3 id="hkQ">百貨精品高消費族，站外都在買什麼？</h3>
+            <p id="hkLead">39.6 萬名真實高消費買家的跨品類輪廓。下一份提案，帶上真的買過的人。</p>
+            <div class="hk-peek">
+              <p class="hk-pt"><span>報告內頁搶先看 · 站外品類 Over-index</span><em>示意</em></p>
+              <div class="pk"><span id="hkK0">精品配件</span><i><s style="width:100%;background:#FF4A53"></s></i><b id="hkV0">3.2×</b></div>
+              <div class="pk"><span id="hkK1">進口保養</span><i><s style="width:84%"></s></i><b id="hkV1">2.7×</b></div>
+              <div class="pk"><span id="hkK2">高端寢具</span><i><s style="width:66%"></s></i><b id="hkV2">2.1×</b></div>
+              <p class="hk-pf">完整版另含：各品類 Top 3 品項、可執行建議、資料來源與方法</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="hk-form" id="hkForm" aria-label="免費領取報告">
+        <p class="hk-step hk-step-r">② 填寫後立即寄送</p>
+        <p class="hk-ft">領取「<span id="hkName">百貨精品高消費族</span>」完整報告</p>
+        <input type="hidden" name="report" id="hkReport" value="百貨精品高消費族">
+        <label>公司 Email<input type="email" required placeholder="name@company.com"></label>
+        <label>公司名稱<input type="text" required placeholder="例：知客股份有限公司"></label>
+        <label>聯絡電話<input type="tel" inputmode="tel" autocomplete="tel" placeholder="例：0912-345-678 或 02-1234-5678"></label>
+        <label>你負責的是哪一塊<select id="hkRole"><option value="marketing">行銷・品牌</option><option value="merch">採購・商品</option><option value="crm">會員・CRM</option><option value="agency">廣告代理商</option></select></label>
+        <label class="hk-ok"><input type="checkbox" required> 我同意知客依隱私權政策使用資料，並訂閱月度零售景氣（可隨時取消）</label>
+        <button type="submit" class="btn btn-red">免費領取這份報告 ↗</button>
+        <p class="hk-more">想看其他族群？<a href="https://consumer-business.cmoney.tw/cadshop" target="_blank" rel="noopener">看全部 20 檔報告 →</a></p>
+      </form>
     </div>
     <div class="ladder">
-      <div class="rung"><p class="lv">第 1 步</p><h3>訂閱月度零售景氣</h3><p>每月一封：銷售月增、年增與景氣分數，只要 Email。</p><form class="sub-form" id="subForm"><input type="email" id="subEmail" placeholder="公司 Email" aria-label="公司 Email"><button type="submit">訂閱</button></form></div>
-      <div class="rung"><p class="lv">第 2 步</p><h3>下載品類白皮書</h3><p>保健、美妝等品類的年度趨勢與通路變化。</p><button class="btn btn-line go" data-contact data-need="品類白皮書">索取白皮書</button></div>
-      <div class="rung"><p class="lv">第 3 步</p><h3>免費品牌健檢</h3><p>一頁看懂三個數字：錢包占有率、競品重疊、通路分布。</p><button class="btn btn-red go" data-contact data-need="品牌健檢">領取品牌健檢</button></div>
+      <div class="rung"><p class="lv">第 1 步 · 免費</p><h3>領一份真實買家檔案</h3><p>三選一先看，知道數據能回答什麼。</p><a class="btn btn-line go" href="#freeReport">就在上方 ↑</a></div>
+      <div class="rung"><p class="lv">第 2 步 · 免費</p><h3>訂閱月度零售景氣</h3><p>每月一封：銷售月增、年增與景氣分數，只要 Email。</p><form class="sub-form" id="subForm"><input type="email" id="subEmail" placeholder="公司 Email" aria-label="公司 Email"><button type="submit">訂閱</button></form></div>
+      <div class="rung"><p class="lv">第 3 步 · 免費</p><h3>免費品牌健檢</h3><p>一頁看懂三個數字：錢包占有率、競品重疊、通路分布。</p><button class="btn btn-red go" data-contact data-need="品牌健檢">領取品牌健檢</button></div>
       <div class="rung"><p class="lv">第 4 步</p><h3>預約顧問解說</h3><p>帶著你的問題來，顧問用你的品類實際跑一次給你看。</p><button class="btn btn-red go" data-contact>預約顧問解說 ↗</button></div>
     </div>
   </div>
@@ -1750,7 +1851,7 @@ body.annot [data-note]::before{content:attr(data-note);position:absolute;z-index
     const sec=$('#ladder'), cv=$('#ladderBg'); if(!sec||!cv) return;
     const ctx=cv.getContext('2d'), rungs=$$('.rung',sec), mq=matchMedia('(max-width:960px)');
     const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches, RED='219,28,38', GAP=26;
-    const LABELS=['訂閱月報','白皮書','品牌健檢','預約顧問解說'];
+    const LABELS=['免費報告','月度景氣','品牌健檢','預約顧問解說'];
     let W=0,H=0,dpr=1,pts=[],seg=[],total=0,drops=[],nodes=[],dots=[],parts=[],rings=[],last=0,spawnT=0,run=false,raf=0;
     function layout(){
       dpr=Math.min(2,devicePixelRatio||1); W=sec.clientWidth; H=sec.clientHeight;
@@ -1805,6 +1906,26 @@ body.annot [data-note]::before{content:attr(data-note);position:absolute;z-index
   modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
   $('#cForm').addEventListener('submit',e=>{e.preventDefault();closeModal();toast('Prototype 示意：已帶入身分「'+(ROLE_NAME[$('#fRole').value]||'未選')+'」，資料不會送出');});
   $('#subForm').addEventListener('submit',e=>{e.preventDefault();toast('Prototype 示意：訂閱不會送出資料');});
+  $('#hkForm').addEventListener('submit',e=>{e.preventDefault();toast('Prototype 示意：「'+$('#hkReport').value+'」・身分「'+(ROLE_NAME[$('#hkRole').value]||'')+'」，報告不會實際寄出');});
+  (function(){
+    const R=[
+      {n:'百貨精品高消費族',t:'百貨精品<br>高消費族',size:'395,880',def:'近一年百貨單筆 5,000 元以上，或累計超過 20,000 元',q:'百貨精品高消費族，站外都在買什麼？',lead:'39.6 萬名真實高消費買家的跨品類輪廓。下一份提案，帶上真的買過的人。',k:[['精品配件','3.2×'],['進口保養','2.7×'],['高端寢具','2.1×']]},
+      {n:'新手爸媽',t:'新手爸媽',size:'225,556',def:'近一年購買嬰兒尿布、奶粉或副食品之家庭',q:'新手爸媽除了尿布奶粉，還把錢花在哪？',lead:'22.6 萬個真實育兒家庭的站外消費輪廓，找出母嬰之外的跨品類機會。',k:[['家庭清潔','2.9×'],['保健食品','2.4×'],['居家收納','1.9×']]},
+      {n:'咖啡重度購買者',t:'咖啡重度<br>購買者',size:'626,003',def:'近一年咖啡相關消費頻次位於前段之買家',q:'每天都要喝的人，下一筆會買什麼？',lead:'62.6 萬名高頻咖啡買家的站外輪廓，看重度消費者還在哪些品類出手。',k:[['烘焙點心','2.6×'],['辦公文具','2.2×'],['健身運動','1.8×']]}
+    ];
+    const body=$('#hkBody'); if(!body) return;
+    $$('.hk-tab').forEach(b=>b.addEventListener('click',()=>{
+      const r=R[+b.dataset.hk];
+      $$('.hk-tab').forEach(x=>{x.classList.toggle('on',x===b);x.setAttribute('aria-selected',x===b);});
+      $('#hkT').innerHTML=r.t; $('#hkDef').textContent=r.def; $('#hkN').textContent=r.size+' 人';
+      $('#hkQ').textContent=r.q; $('#hkLead').textContent=r.lead;
+      r.k.forEach((kv,i)=>{$('#hkK'+i).textContent=kv[0];$('#hkV'+i).textContent=kv[1];});
+      $('#hkName').textContent=r.n; $('#hkReport').value=r.n;
+      body.classList.remove('fx'); void body.offsetWidth; body.classList.add('fx');
+    }));
+  })();
+
+  $$('#hkRole').forEach(x=>{ if(typeof curRole!=='undefined') x.value=curRole; });
 })();
 </script>
 </body>
